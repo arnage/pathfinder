@@ -1,6 +1,6 @@
 {
   "name": "react-pathfinder",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description":
     "A React-based Library, which can be used for developing keyboard/remote controller handling in SPA and smartTV apps",
   "main": "index.js",
