@@ -1,0 +1,16 @@
+{
+  "name": "pathfinder",
+  "version": "0.2.0",
+  "description":
+    "A React-based Library, which can be used for developing keyboard/remote controller handling in SPA and smartTV apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["keyboard", "smartTV", "react"],
+  "author": {
+    "name": "Ilya Ozerov",
+    "email": "arnage92@gmail.com"
+  },
+  "license": "MIT"
+}
