@@ -1,9 +1,6 @@
 // @flow
 import React, { Component } from "react";
 import _ from "lodash";
-import history from "./history";
-
-import type { ConnectedComponent } from "react-redux";
 
 // keys
 const LEFT = 37;
@@ -150,7 +147,7 @@ export default class Pathfinder extends Component<any, PathfinderState> {
   handleEnter = (vertice: ?Vertice): void => {
     if (!vertice) return;
     if (vertice.to) {
-      history.push(vertice.to);
+      this.props.history.push(vertice.to);
       return;
     }
     if (vertice.node && vertice.node.tagName !== "INPUT") {
@@ -160,7 +157,7 @@ export default class Pathfinder extends Component<any, PathfinderState> {
     }
   };
   handleBack = (): void => {
-    history.goBack();
+    this.props.history.goBack();
   };
   handleYellowKey = (): void => {
     if (typeof this.refChild.handleYellowKey === "function")
@@ -170,7 +167,7 @@ export default class Pathfinder extends Component<any, PathfinderState> {
     if (typeof this.refChild.handleBlueKey === "function")
       this.refChild.handleBlueKey();
   };
-  checkWrappedComponent = (ref: ?ConnectedComponent<any>): void => {
+  checkWrappedComponent = (ref: ?Component<any>): void => {
     if (!ref) return;
     if (ref.getWrappedInstance) {
       try {
