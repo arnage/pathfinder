@@ -1,4 +1,10 @@
 {
-  "presets": ["env"],
-  "plugins": ["transform-object-rest-spread", "transform-react-jsx"]
+  "presets": ["es2015", "stage-0", "flow", "react"],
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-react-flow-props-to-prop-types",
+    "transform-flow-strip-types",
+    "transform-object-rest-spread",
+    "transform-react-jsx"
+  ]
 }
